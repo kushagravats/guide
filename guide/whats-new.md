@@ -1,69 +1,85 @@
-<style scoped>
-.emoji-container {
-	display: inline-block;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-.emoji-container .emoji-image {
-	width: 1.375rem;
-	height: 1.375rem;
-	vertical-align: bottom;
-}
-</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style scoped>
+    .emoji-container {
+      display: inline-block;
+    }
 
-# What's new
+    .emoji-container .emoji-image {
+      width: 1.375rem;
+      height: 1.375rem;
+      vertical-align: bottom;
+    }
+  </style>
+  <title>Discord.js Guide Update</title>
+</head>
 
-<DiscordMessages>
-	<DiscordMessage profile="bot">
-		<template #interactions>
-			<DiscordInteraction
-				profile="user"
-				author="discord.js"
-				:command="true"
-			>upgrade</DiscordInteraction>
-		</template>
-		discord.js v14 has released and the guide has been updated!
-		<span class="emoji-container">
-			<img class="emoji-image" title="tada" alt=":tada:" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@v14.0.2/assets/72x72/1f389.png" />
-		</span>
-		<br />
-		This includes additions and changes made in Discord, such as slash commands and message components.
-	</DiscordMessage>
-</DiscordMessages>
+<body>
 
-## Site
+  <h1>What's New</h1>
 
-- Upgraded to [VuePress v2](https://v2.vuepress.vuejs.org/)
-- New theme made to match the [discord.js documentation site](https://discord.js.org/)
-- Discord message components upgraded to [@discord-message-components/vue](https://github.com/Danktuary/discord-message-components/blob/main/packages/vue/README.md)
-- Many fixes in code blocks, grammar, consistency, etc.
+  <!-- Discord.js Message Component -->
+  <DiscordMessages>
+    <DiscordMessage profile="bot">
+      <template #interactions>
+        <DiscordInteraction profile="user" author="discord.js" :command="true">upgrade</DiscordInteraction>
+      </template>
+      discord.js v14 has been released, and the guide has been updated!
+      <span class="emoji-container">
+        <img class="emoji-image" title="tada" alt=":tada:"
+          src="https://cdn.jsdelivr.net/gh/twitter/twemoji@v14.0.2/assets/72x72/1f389.png" />
+      </span>
+      <br />
+      This includes additions and changes made in Discord, such as slash commands and message components.
+    </DiscordMessage>
+  </DiscordMessages>
 
-## Pages
+  <!-- Site Updates -->
+  <h2>Site Updates</h2>
+  <ul>
+    <li>Upgraded to <a href="https://v2.vuepress.vuejs.org/" target="_blank">VuePress v2</a></li>
+    <li>New theme made to match the <a href="https://discord.js.org/" target="_blank">discord.js documentation site</a></li>
+    <li>Discord message components upgraded to <a href="https://github.com/Danktuary/discord-message-components/blob/main/packages/vue/README.md"
+        target="_blank">@discord-message-components/vue</a></li>
+    <li>Many fixes in code blocks, grammar, consistency, etc.</li>
+  </ul>
 
-All content has been updated to use discord.js v14 syntax. The v13 version of the guide can be found at [https://v13.discordjs.guide/](https://v13.discordjs.guide/).
+  <!-- Pages Updates -->
+  <h2>Pages Updates</h2>
+  <p>All content has been updated to use discord.js v14 syntax. The v13 version of the guide can be found at <a
+      href="https://v13.discordjs.guide/" target="_blank">https://v13.discordjs.guide/</a>.</p>
 
-### New
+  <!-- New Content -->
+  <h3>New</h3>
+  <ul>
+    <li><a href="/additional-info/changes-in-v14.md">Updating from v13 to v14</a>: A list of the changes from discord.js
+      v13 to v14</li>
+    <!-- Add other new content items here -->
+  </ul>
 
-- [Updating from v13 to v14](/additional-info/changes-in-v14.md): A list of the changes from discord.js v13 to v14
-- [Slash commands](/slash-commands/advanced-creation.md): Registering, replying to slash commands and permissions
-- [Buttons](/message-components/buttons): Building, sending, and receiving buttons
-- [Select menus](/message-components/select-menus): Building, sending, and receiving select menus
-- [Threads](/popular-topics/threads.md): Creating and managing threads
-- [Formatters](/popular-topics/formatters.md): A collection of formatters to use with your bot
+  <!-- Updated Content -->
+  <h3>Updated</h3>
+  <ul>
+    <li>Commando: Replaced with <a href="https://sapphirejs.dev/docs/Guide/getting-started/getting-started-with-sapphire"
+        target="_blank">Sapphire</a></li>
+    <!-- Add other updated content items here -->
+  </ul>
 
-### Updated
+  <!-- Discord Messages Component -->
+  <DiscordMessages>
+    <DiscordMessage profile="bot">
+      Thank you to all of those that contributed to the development of discord.js and the guide!
+      <span class="emoji-container">
+        <img class="emoji-image" title="heart" alt=":heart:"
+          src="https://cdn.jsdelivr.net/gh/twitter/twemoji@v14.0.2/assets/72x72/2764.png" />
+      </span>
+    </DiscordMessage>
+  </DiscordMessages>
 
-- Commando: Replaced with [Sapphire](https://sapphirejs.dev/docs/Guide/getting-started/getting-started-with-sapphire)
-- [Voice](/voice/): Rewritten to use the [`@discordjs/voice`](https://github.com/discordjs/discord.js/tree/main/packages/voice) package
-- [Command handling](/creating-your-bot/command-handling.md/): Updated to use slash commands
-	- Obsolete sections removed
-- `client.on('message')` snippets updated to `client.on('interactionCreate')`
-	- [Message content will become a new privileged intent on August 31, 2022](https://support-dev.discord.com/hc/articles/4404772028055)
+</body>
 
-<DiscordMessages>
-	<DiscordMessage profile="bot">
-		Thank you to all of those that contributed to the development of discord.js and the guide!
-		<span class="emoji-container">
-			<img class="emoji-image" title="heart" alt=":heart:" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@v14.0.2/assets/72x72/2764.png" />
-		</span>
-	</DiscordMessage>
-</DiscordMessages>
+</html>
